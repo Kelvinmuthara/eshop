@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Kevo's Furniture</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .thank-you-section {
+            padding: 100px 0;
+            text-align: center;
+        }
+        .thank-you-section h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .thank-you-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .check-icon {
+            font-size: 80px;
+            color: #28a745;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Kevo<span>.</span></a>
+            <!-- Add your navigation menu items here -->
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-5">
+                    <div class="intro-excerpt">
+                        <h1>Thank You</h1>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="thank-you-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <i class="fas fa-check-circle check-icon"></i>
+                    <h1>Thank You for Your Order!</h1>
+                    <p>Your order has been successfully placed and is being processed.</p>
+                    <p>Order number: <strong id="order-number"></strong></p>
+                    <p>We've sent a confirmation email with the order details to your email address.</p>
+                    <p>Expected delivery: <strong>3-5 business days</strong></p>
+                    <a href="shop.html" class="btn btn-primary">Continue Shopping</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-section">
+        <!-- Add your footer content here -->
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        // Generate a random order number
+        function generateOrderNumber() {
+            return 'ANT-' + Math.random().toString(36).substr(2, 9).toUpperCase();
+        }
+
+        // Set the order number when the page loads
+        window.onload = function() {
+            document.getElementById('order-number').textContent = generateOrderNumber();
+        }
+    </script>
+</body>
+</html>
